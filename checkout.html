@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Secret Steps</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">
+                <img src="image/SS-Logo.png" alt="Secret Steps Logo" class="logo-img">
+                Secret Steps
+            </a>
+
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">About us</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="products.html#videos" class="navbar__links">Abos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="legal-page" id="checkout-main">
+
+        <section class="legal-hero">
+            <h1>Checkout</h1>
+            <p>
+                Mit Ihrer Bestellung sind Sie mit unseren AGBs einverstanden.
+                Lesen Sie sich bitte unsere <a href="datenschutz.html">Datenschutzerklärung</a>, sowie <a href="datenschutz.html#cookies">Cookie Hinweise</a> durch.
+            </p>
+        </section>
+
+        <section class="legal-card">
+            <h2>Warenkorb</h2>
+
+            <table class="license-table">
+                <thead>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Abo</th>
+                        <th>Preis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id = "checkout-product">Produkt lädt...</td>
+                        <td id = "checkout-duration">-</td>
+                        <td id = "checkout-price">-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                Es handelt sich um ein digitales Produkt, daher fallen keine Versandkosten an.
+            </p>
+        </section>
+
+        <section class="legal-card">
+            <h2>Kundendaten</h2>
+
+            <form class="contact-form" action="#" method="post">
+                <p>
+                    <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Vor- und Nachname">
+                </p>
+                <p>
+                    <label for="email">E-Mail-Adresse</label>
+                <input type="email" id="email" name="email" placeholder="deine@gmail.com">
+                </p>
+                <p>
+                     <label for="address">Rechnungsadresse</label>
+                <input type="text" id="address" name="address" placeholder="Adresse">
+                </p>
+               
+                <h3>Zahlungsart</h3>
+
+                <label>
+                    <input type="radio" name="payment" value="creditcard">
+                    Kreditkarte
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="paypal">
+                    PayPal
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="bank">
+                    Banküberweisung
+                </label>
+
+                <h3>Rechtliche Hinweise</h3>
+                <p>
+                    <label>
+                    <input type="checkbox" name="license">
+                    Ich akzeptiere die
+                    <a href="lizenz.html">Lizenzbedingungen</a>.
+                </label> 
+                </p>
+               <p>
+                <label>
+                    <input type="checkbox" name="privacy">
+                    Ich habe die
+                    <a href="datenschutz.html">Datenschutzerklärung</a>
+                    gelesen.
+                </label>
+               </p>
+
+                <p>
+                    <label>
+                    <input type="checkbox" name="digital-content">
+                    Ich nehme zur Kenntnis, dass es sich um digitale Inhalte handelt.
+                </label>
+                </p>
+                <p style="font-size: 12px;">
+                    Dieser Checkout ist ein Mockup, keine echte Bestellung,
+                    Zahlungen oder Kundendaten werden verarbeitet.
+                </p>
+
+                <button type="button" class="main__btn" onclick="window.location.href='thanks.html'">
+                    Kostenpflichtig bestellen (Mockup)
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer__container">
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="index.html" id="footer__logo">Secret Steps</a>
+                </div>
+
+                <p class="website__rights">
+                    © 2026 Secret Steps. Texte, Videos und Gestaltung gehören
+                    „Secret Steps“, soweit nicht anders gekennzeichnet.
+                    Externe Medien stehen unter den angegebenen Lizenzen:
+                    siehe <a href="lizenz.html">Urheberrecht</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const produkt = params.get("produkt");
+
+    const produkte = {
+        yoga: {
+            name: "Yoga Starter Paket",
+            dauer: "monatliches Abo",
+            preis: "8,99 € inkl. USt."
+        },
+        fitness: {
+            name: "Fitness Workout",
+            dauer: "monatliches Abo",
+            preis: "8,99 € inkl. USt."
+        },
+        premium: {
+            name: "Secret Steps Premium",
+            dauer: "monatliches Abo",
+            preis: "14,99 € inkl. USt."
+        }
+    };
+
+    if (produkte[produkt]) {
+        document.getElementById("checkout-product").textContent = produkte[produkt].name;
+        document.getElementById("checkout-duration").textContent = produkte[produkt].dauer;
+        document.getElementById("checkout-price").textContent = produkte[produkt].preis;
+    } else {
+        document.getElementById("checkout-product").textContent = "Kein Produkt ausgewählt";
+        document.getElementById("checkout-duration").textContent = "-";
+        document.getElementById("checkout-price").textContent = "-";
+    }
+</script>
+</body>
+</html>

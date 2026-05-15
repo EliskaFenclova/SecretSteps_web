@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkte | Secret Steps</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">
+                <img src="image/SS-Logo.png" alt="Secret Steps Logo" class="logo-img">
+                Secret Steps
+            </a>
+
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">About us</a>
+                </li>
+               
+                
+            </ul>
+        </div>
+    </nav>
+
+    <main class="legal-page">
+
+        <section class="legal-hero">
+            <h1>Unsere Produkte</h1>
+            <p>
+                Hier findest du unsere digitalen Fitness- und Yoga-Angebote von
+                „Secret Steps“.
+            
+            </p>
+        </section>
+        <section class="legal-card" id ="Zielgruppe">
+            <h2>Stakeholder</h2>
+            <p>
+                Unsere Sportvideos richten sich an alle Menschen, welche von zuhause aus trainieren möchten. Besonderer Fokus richtet sich an Anfänger;innen, Berufstätige und jene die zu wenig Zeit für ein Fitnesstudio haben.
+            </p>
+            <p>
+                "Secret Steps" ist für verschiedene Altergruppen geeignet, da unsere Videos mit unterschiedlichen Schwierigkeitsstufen angeboten werden. Für Kinder unter 14 Jahren wird empfohlen die Übungen nur unter Aufsicht einer erwachsenen Person durchzuführen.
+            </p>
+        </section>
+
+        <section class="legal-card" id="videos">
+            <h2>Unsere Sportvideos und Trainingspläne</h2>
+            <p>
+                Die folgenden Produkte sind fiktive Inhalte. Die Bilder dienen als
+                Vorschau für die angebotenen Sportvideos.
+                Hinweis: Die folgenden Videos werden nur auf Deutsch mit deutschen Untertiteln angeboten. Diese wurden für die Videos von "Secret Steps" selbst erstellt.
+            </p>
+
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <img src="image/pic2.jpg" alt="Yoga Trainingsvideo">
+                    <h3>Yoga Starter Paket</h3>
+                    <p>
+                        In unserem "Yoga Starter Paket" befinden sich einfache Yogaübungen für Anfänger;innen. Diese Videos bieten eine einfache Nutzung für ein angenehmes Training zuhause an.
+                    </p>
+                    <p class="price">8,99 € / Monat</p>
+                    <a href="checkout.html?produkt=yoga" class="main__btn checkout-btn">Abo auswählen</a>
+                    
+                </article>
+
+                <article class="product-card">
+                    <img src="image/pic3.jpg" alt="Fitness Trainingsvideo">
+                    <h3>Fitness Workout</h3>
+                    <p>
+                        In diesem Abschnitt gibt es unterschiedliche Sportvideos für Ausdauer, Kraft, Muskelaufbau uvm.
+                    </p>
+                    <p class="price">8,99 € / Monat</p>
+                    <a href="checkout.html?produkt=fitness" class="main__btn checkout-btn">Abo auswählen</a>
+                    
+                </article>
+
+                <article class="product-card">
+                    <img src="image/pic1.svg" alt="Premium Abo">
+                    <h3>Secret Steps Premium</h3>
+                    <p>
+                        Monatliches Abo mit Zugriff auf alle Videos, Trainingspläne,
+                        Ernährungspläne und neue Premium Inhalte.
+                    </p>
+                    <p class="price">14,99 € / Monat</p>
+                    <a href="checkout.html?produkt=premium" class="main__btn checkout-btn">Abo auswählen</a>
+
+                </article>
+
+            </div>
+        </section>
+
+        <section class="legal-card">
+            <h2>Hinweis zum Mockup</h2>
+            <p>
+                Diese Produktseite simuliert einen Webshop. Die "Abo auswählen" Knöpfe führen zu einem
+                gemockten Checkout. 
+                Achtung: Es werden keine echten Bestellungen, Zahlungen oder
+                Kundendaten verarbeitet.
+            </p>
+        </section>
+
+    </main>
+    
+
+    <footer class="footer__container">
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="index.html" id="footer__logo">Secret Steps</a>
+                </div>
+
+                <p class="website__rights">
+                    © 2026 Secret Steps. Texte, Videos und Gestaltung gehören
+                    „Secret Steps“, soweit nicht anders gekennzeichnet.
+                    Externe Medien stehen unter den angegebenen Lizenzen:
+                    siehe <a href="lizenz.html">Urheberrecht</a>.
+                </p>
+            </div>
+        </div>
+    <div id="loginModal" class="login-modal">
+    <div class="login-box">
+        <span id="closeLogin" class="close-login">&times;</span>
+
+        <h2>Login erforderlich</h2>
+        <p>Um ein Abo auszuwählen melden Sie sich bitte an.</p>
+
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="E-Mail" required>
+            <input type="password" id="password" placeholder="Passwort" required>
+
+            <button type="submit" class="main__btn">Einloggen</button>
+        </form>
+
+        <p class="login-hint">
+            Hinweis: geben Sie eine beliebige E-Mail und Passwort ein. Ihre Daten werden nicht gespeichert, es dient lediglich als Vorschau.
+        </p>
+    </div>
+</div>
+
+<script src="login.js"></script>
+    
+</body>
+</html>
